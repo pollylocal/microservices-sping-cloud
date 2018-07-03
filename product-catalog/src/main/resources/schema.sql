@@ -1,0 +1,5 @@
+CREATE TABLE products (
+  id INTEGER IDENTITY PRIMARY KEY,
+  name VARCHAR(30),
+  price DECIMAL(10, 2)
+);

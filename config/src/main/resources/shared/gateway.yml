@@ -1,0 +1,17 @@
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+
+  routes:
+    auth-service:
+        path: /product-catalog/**
+        url: http://product-catalog:4444
+        stripPrefix: true
+    webserver:
+        path: /webserver/**
+        url: http://webserver:3333
+        stripPrefix: true
+server:
+  port: 7777
