@@ -13,7 +13,7 @@ services:
       config:
         condition: service_healthy
     ports:
-      - 8761:8761
+      - 1111:8761
 
   accounts:
     build: accounts
@@ -68,4 +68,4 @@ services:
       registry:
         condition: service_healthy
     ports:
-      - 80:7777
+      - 81:7777
